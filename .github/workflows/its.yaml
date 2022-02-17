@@ -1,0 +1,16 @@
+name: telegram message example
+on: [push]
+jobs:
+  build_deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+      - name: install
+        run: |
+          npm install
+      - name: send-telegram-message
+        env:
+          TELEGRAM_TOKEN: 5107785619:AAEfkSzkiMjKIePkBSbdy20W386Y3RFHdRc
+          TELEGRAM_TEXT: "Deployed to https://cri.dev"
+        run: |
+          npx simple-telegram-message@latest
