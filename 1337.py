@@ -19,7 +19,7 @@ with requests.session() as s:
     r=s.post(url,data=login_data,headers={"User-Agent" : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"})
     try:
         b=BeautifulSoup(r.text,'html.parser')
-        if b.find('div',attrs={'id':'subs-content'}).find_all('h2')[0].text!='jhjhjhjh':
+        if b.find('div',attrs={'id':'subs-content'}).find_all('h2')[0].text!='Pool is loading':
             notif()
     except:
         notif() 
