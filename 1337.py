@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-from lxml import html
 
 def notif():
     text="nod azebi"
