@@ -22,6 +22,5 @@ jobs:
               python -m pip install bs4
           - name: execute py script # run the run.py to get the latest data
             run: |
-              python 1337.py khikhi
-            env:
-              key: ${{ secrets.key }} # if run.py requires passwords..etc, set it as secrets
+              py 1337.py ${{ secrets.EMAIL }} ${{ secrets.PASSWORD }} ${{ secrets.API }} ${{ secrets.ID_CHAT }}
+
