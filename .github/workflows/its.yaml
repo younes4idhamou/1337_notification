@@ -27,5 +27,4 @@ jobs:
                   EMAIL: ${{ secrets.EMAIL }}
                   PASSWORD: ${{ secrets.PASSWORD }}
             run: |
-              py 1337.py
-
+              python 1337.py
