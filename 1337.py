@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-from lxml import html
 import os
 TOKEN=os.environ['TOKEN']
 ID_CHAT=os.environ['ID_CHAT']
